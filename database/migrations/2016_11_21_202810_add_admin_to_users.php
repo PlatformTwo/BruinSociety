@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class UpdateUsersTable extends Migration
+class AddAdminToUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,9 @@ class UpdateUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('university_year');
-            $table->string('image');
+            //
+            $table->binary('is_admin');
+
         });
     }
 

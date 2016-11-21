@@ -38,6 +38,20 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('university_id') ? ' has-error' : '' }}">
+                            <label for="university_id" class="col-md-4 control-label">University ID</label>
+
+                            <div class="col-md-6">
+                                <input id="university_id" type="text" class="form-control" name="university_id" value="{{ old('university_id') }}" required autofocus>
+
+                                @if ($errors->has('university_id'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('university_id') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
